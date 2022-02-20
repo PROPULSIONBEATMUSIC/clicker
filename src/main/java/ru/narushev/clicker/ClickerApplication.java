@@ -4,23 +4,22 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Random;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JButton;
 
 public class ClickerApplication {
 
-    public static void govnoNaPalke(){
+    public static void clicker(){
         JFrame.setDefaultLookAndFeelDecorated(true);
         JFrame frame = new JFrame("Кликер");
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        JButton button = new JButton("Нажми");
+        JButton button = new JButton("click");
         frame.add(button);
         MyMouse listener = new MyMouse();
         button.addMouseListener((MouseListener) listener);
 
 
-        frame.setPreferredSize(new Dimension(200, 100));
+        frame.setPreferredSize(new Dimension(500, 500));
 
         frame.pack();
         frame.setVisible(true);
@@ -29,7 +28,7 @@ public class ClickerApplication {
     public static void main(String[] args) {
         javax.swing.SwingUtilities.invokeLater(new Runnable() {
             public void run() {
-                govnoNaPalke();
+                clicker();
             }
         });
     }
